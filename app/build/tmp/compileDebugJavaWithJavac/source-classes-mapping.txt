@@ -1,0 +1,93 @@
+com/dsmith/myedu/ScheduleDatabase.java
+ com.dsmith.myedu.ScheduleDatabase
+ com.dsmith.myedu.ScheduleDatabase$1
+com/dsmith/myedu/Instructor.java
+ com.dsmith.myedu.Instructor
+com/dsmith/myedu/TermDao.java
+ com.dsmith.myedu.TermDao
+com/dsmith/myedu/AddCourseView.java
+ com.dsmith.myedu.AddCourseView
+ com.dsmith.myedu.AddCourseView$1
+ com.dsmith.myedu.AddCourseView$CourseSaveFinishedListener
+ com.dsmith.myedu.AddCourseView$FieldFocusChangeListener
+com/dsmith/myedu/Note.java
+ com.dsmith.myedu.Note
+com/dsmith/myedu/AddNoteView.java
+ com.dsmith.myedu.AddNoteView
+ com.dsmith.myedu.AddNoteView$NoteSaveFinishedListener
+com/dsmith/myedu/MainActivity.java
+ com.dsmith.myedu.MainActivity
+ com.dsmith.myedu.MainActivity$ItemAdapter
+ com.dsmith.myedu.MainActivity$ItemHolder
+com/dsmith/myedu/Course.java
+ com.dsmith.myedu.Course
+ com.dsmith.myedu.Course$Status
+com/dsmith/myedu/NoteDao.java
+ com.dsmith.myedu.NoteDao
+com/dsmith/myedu/CourseDetailsView.java
+ com.dsmith.myedu.CourseDetailsView
+ com.dsmith.myedu.CourseDetailsView$ItemAdapter
+ com.dsmith.myedu.CourseDetailsView$ItemHolder
+ com.dsmith.myedu.CourseDetailsView$NoteSelectedListener
+com/dsmith/myedu/InstructorDetailsView.java
+ com.dsmith.myedu.InstructorDetailsView
+com/dsmith/myedu/Term.java
+ com.dsmith.myedu.Term
+com/dsmith/myedu/AssessmentDao.java
+ com.dsmith.myedu.AssessmentDao
+com/dsmith/myedu/AddTermView.java
+ com.dsmith.myedu.AddTermView
+ com.dsmith.myedu.AddTermView$1
+ com.dsmith.myedu.AddTermView$FieldFocusChangeListener
+ com.dsmith.myedu.AddTermView$SaveFinishedListener
+com/dsmith/myedu/TermDetailsView.java
+ com.dsmith.myedu.TermDetailsView
+ com.dsmith.myedu.TermDetailsView$CourseAdapter
+ com.dsmith.myedu.TermDetailsView$CourseHolder
+com/dsmith/myedu/AddAssessmentView.java
+ com.dsmith.myedu.AddAssessmentView
+ com.dsmith.myedu.AddAssessmentView$1
+ com.dsmith.myedu.AddAssessmentView$FieldFocusChangeListener
+ com.dsmith.myedu.AddAssessmentView$SaveFinishedListener
+com/dsmith/myedu/CourseDao.java
+ com.dsmith.myedu.CourseDao
+com/dsmith/myedu/Assessment.java
+ com.dsmith.myedu.Assessment
+ com.dsmith.myedu.Assessment$AssessmentType
+com/dsmith/myedu/AssessmentView.java
+ com.dsmith.myedu.AssessmentView
+ com.dsmith.myedu.AssessmentView$AssessmentAdapter
+ com.dsmith.myedu.AssessmentView$AssessmentHolder
+com/dsmith/myedu/InstructorView.java
+ com.dsmith.myedu.InstructorView
+ com.dsmith.myedu.InstructorView$InstructorAdapter
+ com.dsmith.myedu.InstructorView$InstructorHolder
+com/dsmith/myedu/Schedule.java
+ com.dsmith.myedu.Schedule
+com/dsmith/myedu/InstructorDao.java
+ com.dsmith.myedu.InstructorDao
+com/dsmith/myedu/Converter.java
+ com.dsmith.myedu.Converter
+com/dsmith/myedu/CourseView.java
+ com.dsmith.myedu.CourseView
+ com.dsmith.myedu.CourseView$CourseAdapter
+ com.dsmith.myedu.CourseView$CourseHolder
+com/dsmith/myedu/AssessmentDetailsView.java
+ com.dsmith.myedu.AssessmentDetailsView
+com/dsmith/myedu/Utils.java
+ com.dsmith.myedu.Utils
+ com.dsmith.myedu.Utils$ItemAdapter
+ com.dsmith.myedu.Utils$ItemHolder
+com/dsmith/myedu/BuildConfig.java
+ com.dsmith.myedu.BuildConfig
+com/dsmith/myedu/AddInstructorView.java
+ com.dsmith.myedu.AddInstructorView
+ com.dsmith.myedu.AddInstructorView$1
+ com.dsmith.myedu.AddInstructorView$FieldFocusChangeListener
+ com.dsmith.myedu.AddInstructorView$SaveFinishedListener
+com/dsmith/myedu/AlertBroadcastReceiver.java
+ com.dsmith.myedu.AlertBroadcastReceiver
+com/dsmith/myedu/TermView.java
+ com.dsmith.myedu.TermView
+ com.dsmith.myedu.TermView$TermAdapter
+ com.dsmith.myedu.TermView$TermHolder
