@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">myEDU</string>
+    <string name="viewTerms">View Terms</string>
+    <string name="viewCourses">View Courses</string>
+    <string name="viewAssessments">View Assessments</string>
+    <string name="viewInstructors">View Instructors</string>
+    <string name="viewNotes">View Notes</string>
+    <string name="manageInstructors">Manage Instructors</string>
+
+    <string name="currentTerm">Current Term</string>
+    <string name="currentCourses">Current Courses</string>
+    <string name="currentAssessments">Current Assessments</string>
+
+    <string name="view_edit_courses">View/Edit Courses</string>
+    <string name="view_edit_contents">View/Edit Contents</string>
+    <string name="view_edit_assessments">View/Edit Assessments</string>
+
+    <string name="ok">OK</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="addTermFragmentTitle">Term Details</string>
+    <string name="termTitleLabel">Title</string>
+    <string name="termCourses">Term Courses</string>
+
+
+    <string name="addInstructorFragmentTitle">Instructor Details</string>
+    <string name="editInstructorNameLabel">Name</string>
+    <string name="editInstructorEmailLabel">Email</string>
+    <string name="editInstructorPhoneLabel">Phone</string>
+
+    <string name="addCourseFragmentTitle">Course Details</string>
+    <string name="editCourseTitleLabel">Title</string>
+    <string name="editCourseDescriptionLabel">Description</string>
+    <string name="editCourseStatusLabel">Status</string>
+    <string name="editCourseInstructorLabel">Instructor</string>
+    <string name="editCourseTermLabel">Term</string>
+    <string name="courseAssessments">Course Assessments</string>
+    <string name="courseNotes">Course Notes</string>
+    <string name="courseAddNote">Add</string>
+    <string name="courseEditNote">Edit</string>
+
+    <string name="addNoteFragmentTitle">Add/Edit Note</string>
+
+    <string name="addAssessmentFragmentTitle">Assessment Details</string>
+    <string name="editAssessmentNameLabel">Name</string>
+    <string name="editAssessmentTypeLabel">Type</string>
+    <string name="assessmentTypePerf">Performance</string>
+    <string name="assessmentTypeObj">Objective</string>
+
+    <string name="monthLabelAbrev">MM</string>
+    <string name="dayLabelAbrev">DD</string>
+    <string name="yearLabelAbrev">YYYY</string>
+    <string name="startDateLabel">Start Date</string>
+    <string name="endDateLabel">End Date</string>
+
+    <string name="action_add">Add</string>
+    <string name="action_edit">Edit</string>
+    <string name="action_delete">Delete</string>
+
+    <string name="alertChannelName">Schedule Alert Channel</string>
+    <string name="alertChannelDesc">Alert channel for notifying the user of upcoming course or assessment dates.</string>
+
+    <string name="blank"> -- </string>
+    <string name="testAlerts">Test Alerts</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
