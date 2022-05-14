@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-64dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/MainScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/viewTermsButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="25dp"
+                android:onClick="viewTermsClick"
+                android:text="@string/viewTerms"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/currentTermText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/blank"
+                app:layout_constraintStart_toEndOf="@+id/currentTermLabel"
+                app:layout_constraintTop_toTopOf="@+id/currentTermLabel" />
+
+            <TextView
+                android:id="@+id/dateView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="TextView" />
+
+            <TextView
+                android:id="@+id/currentTermLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/currentTerm"
+                app:layout_constraintStart_toStartOf="@+id/dateView"
+                app:layout_constraintTop_toBottomOf="@+id/dateView" />
+
+            <TextView
+                android:id="@+id/currentCoursesLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/currentCourses"
+                app:layout_constraintStart_toStartOf="@+id/currentTermLabel"
+                app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+            <TextView
+                android:id="@+id/currentAssessmentsLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/currentAssessments"
+                app:layout_constraintStart_toStartOf="@+id/currentCoursesLabel"
+                app:layout_constraintTop_toBottomOf="@+id/divider5" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="5dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintTop_toBottomOf="@+id/currentTermText"
+                tools:layout_editor_absoluteX="3dp" />
+
+            <View
+                android:id="@+id/divider5"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="10dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintTop_toBottomOf="@+id/currentCoursesList"
+                tools:layout_editor_absoluteX="3dp" />
+
+            <View
+                android:id="@+id/divider6"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="10dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintTop_toBottomOf="@+id/currentAssessmentsList" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/currentCoursesList"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/currentCoursesLabel" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/currentAssessmentsList"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/currentCoursesList"
+                app:layout_constraintStart_toStartOf="@+id/currentCoursesList"
+                app:layout_constraintTop_toBottomOf="@+id/currentAssessmentsLabel" />
+
+            <Button
+                android:id="@+id/testAlertButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="testAlertClick"
+                android:text="@string/testAlerts"
+                app:layout_constraintEnd_toStartOf="@+id/viewTermsButton"
+                app:layout_constraintStart_toEndOf="@+id/dateView"
+                app:layout_constraintTop_toTopOf="@+id/viewTermsButton" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

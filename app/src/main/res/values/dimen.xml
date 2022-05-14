@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="editTermWidth">350dp</dimen>
+    <dimen name="editTermHeight">450dp</dimen>
+
+
+</resources>

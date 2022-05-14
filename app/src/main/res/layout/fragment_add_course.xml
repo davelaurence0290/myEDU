@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddCourseView">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/addCourseCancelButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:onClick="onCourseCancelButtonClick"
+                android:text="@string/cancel"
+                app:layout_constraintBottom_toBottomOf="@+id/addCourseSaveButton"
+                app:layout_constraintEnd_toEndOf="@+id/addCourseDescriptionText"
+                app:layout_constraintTop_toTopOf="@+id/addCourseSaveButton" />
+
+            <Button
+                android:id="@+id/addCourseSaveButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:onClick="onCourseSaveButtonClick"
+                android:text="@string/save"
+                app:layout_constraintEnd_toStartOf="@+id/addCourseCancelButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/addCourseEndMonthPicker" />
+
+            <EditText
+                android:id="@+id/addCourseTitleText"
+                android:layout_width="155dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="50dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/addCourseDescriptionText"
+                android:layout_width="155dp"
+                android:layout_height="114dp"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                app:layout_constraintStart_toStartOf="@+id/addCourseTitleText"
+                app:layout_constraintTop_toBottomOf="@+id/addCourseTitleText" />
+
+            <NumberPicker
+                android:id="@+id/addCourseEndYearPicker"
+                android:layout_width="40dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="6dp"
+                app:layout_constraintBottom_toBottomOf="@+id/addCourseEndMonthPicker"
+                app:layout_constraintStart_toEndOf="@+id/addCourseEndDayPicker"
+                app:layout_constraintTop_toTopOf="@+id/addCourseEndMonthPicker"
+                tools:maxValue="2050"
+                tools:minValue="2020" />
+
+            <NumberPicker
+                android:id="@+id/addCourseEndMonthPicker"
+                android:layout_width="30dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toStartOf="@+id/addCourseStartMonthPicker"
+                app:layout_constraintTop_toBottomOf="@+id/addCourseStartMonthPicker"
+                tools:maxValue="12"
+                tools:minValue="1" />
+
+            <NumberPicker
+                android:id="@+id/addCourseEndDayPicker"
+                android:layout_width="30dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="6dp"
+                app:layout_constraintBottom_toBottomOf="@+id/addCourseEndMonthPicker"
+                app:layout_constraintStart_toEndOf="@+id/addCourseEndMonthPicker"
+                app:layout_constraintTop_toTopOf="@+id/addCourseEndMonthPicker"
+                tools:maxValue="31"
+                tools:minValue="1" />
+
+            <NumberPicker
+                android:id="@+id/addCourseStartMonthPicker"
+                android:layout_width="30dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="25dp"
+                app:layout_constraintStart_toStartOf="@+id/courseInstructorSpinner"
+                app:layout_constraintTop_toBottomOf="@+id/addCourseManageInstructorsButton"
+                tools:maxValue="12"
+                tools:minValue="1" />
+
+            <NumberPicker
+                android:id="@+id/addCourseStartYearPicker"
+                android:layout_width="40dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="6dp"
+                app:layout_constraintBottom_toBottomOf="@+id/addCourseStartMonthPicker"
+                app:layout_constraintStart_toEndOf="@+id/addCourseStartDayPicker"
+                app:layout_constraintTop_toTopOf="@+id/addCourseStartMonthPicker"
+                tools:maxValue="2050"
+                tools:minValue="2020" />
+
+            <NumberPicker
+                android:id="@+id/addCourseStartDayPicker"
+                android:layout_width="30dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="6dp"
+                app:layout_constraintBottom_toBottomOf="@+id/addCourseStartMonthPicker"
+                app:layout_constraintStart_toEndOf="@+id/addCourseStartMonthPicker"
+                app:layout_constraintTop_toTopOf="@+id/addCourseStartMonthPicker"
+                tools:maxValue="31"
+                tools:minValue="1" />
+
+            <Spinner
+                android:id="@+id/courseStatusSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@+id/addCourseDescriptionText"
+                app:layout_constraintTop_toBottomOf="@+id/addCourseDescriptionText" />
+
+            <Spinner
+                android:id="@+id/courseInstructorSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@+id/courseStatusSpinner"
+                app:layout_constraintTop_toBottomOf="@+id/courseStatusSpinner" />
+
+            <TextView
+                android:id="@+id/yearLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/yearLabelAbrev"
+                app:layout_constraintBottom_toTopOf="@+id/addCourseStartYearPicker"
+                app:layout_constraintEnd_toEndOf="@+id/addCourseStartYearPicker"
+                app:layout_constraintStart_toStartOf="@+id/addCourseStartYearPicker" />
+
+            <TextView
+                android:id="@+id/dayLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dayLabelAbrev"
+                app:layout_constraintBottom_toTopOf="@+id/addCourseStartDayPicker"
+                app:layout_constraintEnd_toEndOf="@+id/addCourseStartDayPicker"
+                app:layout_constraintStart_toStartOf="@+id/addCourseStartDayPicker" />
+
+            <TextView
+                android:id="@+id/monthLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/monthLabelAbrev"
+                app:layout_constraintBottom_toTopOf="@+id/addCourseStartMonthPicker"
+                app:layout_constraintEnd_toEndOf="@+id/addCourseStartMonthPicker"
+                app:layout_constraintStart_toStartOf="@+id/addCourseStartMonthPicker" />
+
+            <TextView
+                android:id="@+id/endDateLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/endDateLabel"
+                app:layout_constraintBottom_toBottomOf="@+id/addCourseEndMonthPicker"
+                app:layout_constraintEnd_toStartOf="@+id/addCourseEndMonthPicker"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/addCourseEndMonthPicker" />
+
+            <TextView
+                android:id="@+id/startDateLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/startDateLabel"
+                app:layout_constraintBottom_toBottomOf="@+id/addCourseStartMonthPicker"
+                app:layout_constraintEnd_toStartOf="@+id/addCourseStartMonthPicker"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/addCourseStartMonthPicker" />
+
+            <TextView
+                android:id="@+id/nameLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/termTitleLabel"
+                app:layout_constraintBottom_toBottomOf="@+id/addCourseTitleText"
+                app:layout_constraintEnd_toStartOf="@+id/addCourseTitleText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/addCourseTitleText" />
+
+            <TextView
+                android:id="@+id/descriptionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/editCourseDescriptionLabel"
+                app:layout_constraintEnd_toStartOf="@+id/addCourseDescriptionText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/addCourseDescriptionText" />
+
+            <TextView
+                android:id="@+id/statusLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/editCourseStatusLabel"
+                app:layout_constraintBottom_toBottomOf="@+id/courseStatusSpinner"
+                app:layout_constraintEnd_toStartOf="@+id/courseStatusSpinner"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/courseStatusSpinner" />
+
+            <TextView
+                android:id="@+id/instructorLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/editCourseInstructorLabel"
+                app:layout_constraintBottom_toBottomOf="@+id/courseInstructorSpinner"
+                app:layout_constraintEnd_toStartOf="@+id/courseInstructorSpinner"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/courseInstructorSpinner" />
+
+            <TextView
+                android:id="@+id/addTermFragTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/addCourseFragmentTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/addCourseManageInstructorsButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/manageInstructors"
+                android:onClick="editInstructorsClick"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/courseInstructorSpinner" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</LinearLayout>

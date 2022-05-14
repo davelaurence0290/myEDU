@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AddAssessmentView">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/addAssessmentSaveButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:onClick="onAssessmentSaveButtonClick"
+                android:text="@string/save"
+                app:layout_constraintStart_toStartOf="@+id/endDateLabel"
+                app:layout_constraintTop_toBottomOf="@+id/addAssessmentEndMonthPicker" />
+
+            <Button
+                android:id="@+id/addAssessmentCancelButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onAssessmentCancelButtonClick"
+                android:text="@string/cancel"
+                app:layout_constraintEnd_toEndOf="@+id/addAssessmentNameText"
+                app:layout_constraintStart_toEndOf="@+id/addAssessmentSaveButton"
+                app:layout_constraintTop_toTopOf="@+id/addAssessmentSaveButton" />
+
+            <EditText
+                android:id="@+id/addAssessmentNameText"
+                android:layout_width="155dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="55dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <NumberPicker
+                android:id="@+id/addAssessmentEndMonthPicker"
+                android:layout_width="30dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="@+id/addAssessmentStartMonthPicker"
+                app:layout_constraintTop_toBottomOf="@+id/addAssessmentStartMonthPicker"
+                tools:maxValue="12"
+                tools:minValue="1" />
+
+            <NumberPicker
+                android:id="@+id/addAssessmentEndDayPicker"
+                android:layout_width="30dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="4dp"
+                app:layout_constraintStart_toEndOf="@+id/addAssessmentEndMonthPicker"
+                app:layout_constraintTop_toTopOf="@+id/addAssessmentEndMonthPicker"
+                tools:maxValue="31"
+                tools:minValue="1" />
+
+            <NumberPicker
+                android:id="@+id/addAssessmentEndYearPicker"
+                android:layout_width="40dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="4dp"
+                app:layout_constraintStart_toEndOf="@+id/addAssessmentEndDayPicker"
+                app:layout_constraintTop_toTopOf="@+id/addAssessmentEndMonthPicker"
+                tools:maxValue="2050"
+                tools:minValue="2020" />
+
+            <NumberPicker
+                android:id="@+id/addAssessmentStartYearPicker"
+                android:layout_width="40dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="4dp"
+                app:layout_constraintStart_toEndOf="@+id/addAssessmentStartDayPicker"
+                app:layout_constraintTop_toTopOf="@+id/addAssessmentStartDayPicker"
+                tools:maxValue="2050"
+                tools:minValue="2020" />
+
+            <NumberPicker
+                android:id="@+id/addAssessmentStartDayPicker"
+                android:layout_width="30dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="4dp"
+                app:layout_constraintStart_toEndOf="@+id/addAssessmentStartMonthPicker"
+                app:layout_constraintTop_toTopOf="@+id/addAssessmentStartMonthPicker"
+                tools:maxValue="31"
+                tools:minValue="1" />
+
+            <NumberPicker
+                android:id="@+id/addAssessmentStartMonthPicker"
+                android:layout_width="30dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintStart_toStartOf="@+id/addAssessmentNameText"
+                app:layout_constraintTop_toBottomOf="@+id/assessmentTypeSpinner"
+                tools:maxValue="12"
+                tools:minValue="1" />
+
+            <Spinner
+                android:id="@+id/assessmentTypeSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toStartOf="@+id/addAssessmentNameText"
+                app:layout_constraintTop_toBottomOf="@+id/addAssessmentNameText" />
+
+            <TextView
+                android:id="@+id/endDateLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/endDateLabel"
+                app:layout_constraintBottom_toBottomOf="@+id/addAssessmentEndMonthPicker"
+                app:layout_constraintEnd_toEndOf="@+id/startDateLabel"
+                app:layout_constraintStart_toStartOf="@+id/startDateLabel"
+                app:layout_constraintTop_toTopOf="@+id/addAssessmentEndMonthPicker" />
+
+            <TextView
+                android:id="@+id/nameLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="@string/editAssessmentNameLabel"
+                app:layout_constraintBottom_toBottomOf="@+id/addAssessmentNameText"
+                app:layout_constraintEnd_toStartOf="@+id/addAssessmentNameText"
+                app:layout_constraintTop_toTopOf="@+id/addAssessmentNameText" />
+
+            <TextView
+                android:id="@+id/startDateLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/startDateLabel"
+                app:layout_constraintBottom_toBottomOf="@+id/addAssessmentStartMonthPicker"
+                app:layout_constraintEnd_toEndOf="@+id/nameLabel"
+                app:layout_constraintStart_toStartOf="@+id/nameLabel"
+                app:layout_constraintTop_toTopOf="@+id/addAssessmentStartMonthPicker" />
+
+            <TextView
+                android:id="@+id/monthLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/monthLabelAbrev"
+                app:layout_constraintBottom_toTopOf="@+id/addAssessmentStartMonthPicker"
+                app:layout_constraintEnd_toEndOf="@+id/addAssessmentStartMonthPicker"
+                app:layout_constraintStart_toStartOf="@+id/addAssessmentStartMonthPicker" />
+
+            <TextView
+                android:id="@+id/dayLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dayLabelAbrev"
+                app:layout_constraintEnd_toEndOf="@+id/addAssessmentStartDayPicker"
+                app:layout_constraintStart_toStartOf="@+id/addAssessmentStartDayPicker"
+                app:layout_constraintTop_toTopOf="@+id/monthLabel" />
+
+            <TextView
+                android:id="@+id/yearLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/yearLabelAbrev"
+                app:layout_constraintEnd_toEndOf="@+id/addAssessmentStartYearPicker"
+                app:layout_constraintStart_toStartOf="@+id/addAssessmentStartYearPicker"
+                app:layout_constraintTop_toTopOf="@+id/dayLabel" />
+
+            <TextView
+                android:id="@+id/addAssessmentFragTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/addAssessmentFragmentTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/typeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/editAssessmentTypeLabel"
+                app:layout_constraintBottom_toBottomOf="@+id/assessmentTypeSpinner"
+                app:layout_constraintEnd_toStartOf="@+id/assessmentTypeSpinner"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/assessmentTypeSpinner" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</FrameLayout>

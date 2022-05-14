@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AddInstructorView">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/addInstructorSaveButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:onClick="onInstructorSaveButtonClick"
+                android:text="@string/save"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/addInstructorPhoneText" />
+
+            <Button
+                android:id="@+id/addInstructorCancelButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onInstructorCancelButtonClick"
+                android:text="@string/cancel"
+                app:layout_constraintEnd_toEndOf="@+id/addInstructorNameText"
+                app:layout_constraintStart_toEndOf="@+id/addInstructorSaveButton"
+                app:layout_constraintTop_toTopOf="@+id/addInstructorSaveButton" />
+
+            <EditText
+                android:id="@+id/addInstructorNameText"
+                android:layout_width="155dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="55dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/addInstructorEmailText"
+                android:layout_width="155dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                app:layout_constraintStart_toStartOf="@+id/addInstructorNameText"
+                app:layout_constraintTop_toBottomOf="@+id/addInstructorNameText" />
+
+            <EditText
+                android:id="@+id/addInstructorPhoneText"
+                android:layout_width="155dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:inputType="text|phone"
+                app:layout_constraintStart_toStartOf="@+id/addInstructorEmailText"
+                app:layout_constraintTop_toBottomOf="@+id/addInstructorEmailText" />
+
+            <TextView
+                android:id="@+id/emailLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/editInstructorEmailLabel"
+                app:layout_constraintBottom_toBottomOf="@+id/addInstructorEmailText"
+                app:layout_constraintEnd_toStartOf="@+id/addInstructorEmailText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/addInstructorEmailText" />
+
+            <TextView
+                android:id="@+id/nameLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/editInstructorNameLabel"
+                app:layout_constraintBottom_toBottomOf="@+id/addInstructorNameText"
+                app:layout_constraintEnd_toStartOf="@+id/addInstructorNameText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/addInstructorNameText" />
+
+            <TextView
+                android:id="@+id/phoneLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/editInstructorPhoneLabel"
+                app:layout_constraintBottom_toBottomOf="@+id/addInstructorPhoneText"
+                app:layout_constraintEnd_toStartOf="@+id/addInstructorPhoneText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/addInstructorPhoneText" />
+
+            <TextView
+                android:id="@+id/addInstructorFragTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/addInstructorFragmentTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</FrameLayout>

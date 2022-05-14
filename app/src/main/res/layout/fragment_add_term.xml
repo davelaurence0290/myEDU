@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AddTermView">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/addTermSaveButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:onClick="onTermSaveButtonClick"
+                android:text="@string/save"
+                app:layout_constraintStart_toStartOf="@+id/endDateLabel"
+                app:layout_constraintTop_toBottomOf="@+id/addTermEndMonthPicker" />
+
+            <Button
+                android:id="@+id/addTermCancelButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onTermCancelButtonClick"
+                android:text="@string/cancel"
+                app:layout_constraintEnd_toEndOf="@+id/addTermTitleText"
+                app:layout_constraintStart_toEndOf="@+id/addTermSaveButton"
+                app:layout_constraintTop_toTopOf="@+id/addTermSaveButton" />
+
+            <EditText
+                android:id="@+id/addTermTitleText"
+                android:layout_width="155dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="55dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <NumberPicker
+                android:id="@+id/addTermEndMonthPicker"
+                android:layout_width="30dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="@+id/addTermStartMonthPicker"
+                app:layout_constraintTop_toBottomOf="@+id/addTermStartMonthPicker"
+                tools:maxValue="12"
+                tools:minValue="1" />
+
+            <NumberPicker
+                android:id="@+id/addTermEndDayPicker"
+                android:layout_width="30dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="4dp"
+                app:layout_constraintStart_toEndOf="@+id/addTermEndMonthPicker"
+                app:layout_constraintTop_toTopOf="@+id/addTermEndMonthPicker"
+                tools:maxValue="31"
+                tools:minValue="1" />
+
+            <NumberPicker
+                android:id="@+id/addTermEndYearPicker"
+                android:layout_width="40dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="4dp"
+                app:layout_constraintStart_toEndOf="@+id/addTermEndDayPicker"
+                app:layout_constraintTop_toTopOf="@+id/addTermEndMonthPicker"
+                tools:maxValue="2050"
+                tools:minValue="2020" />
+
+            <NumberPicker
+                android:id="@+id/addTermStartYearPicker"
+                android:layout_width="40dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="4dp"
+                app:layout_constraintStart_toEndOf="@+id/addTermStartDayPicker"
+                app:layout_constraintTop_toTopOf="@+id/addTermStartDayPicker"
+                tools:maxValue="2050"
+                tools:minValue="2020" />
+
+            <NumberPicker
+                android:id="@+id/addTermStartDayPicker"
+                android:layout_width="30dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="4dp"
+                app:layout_constraintStart_toEndOf="@+id/addTermStartMonthPicker"
+                app:layout_constraintTop_toTopOf="@+id/addTermStartMonthPicker"
+                tools:maxValue="31"
+                tools:minValue="1" />
+
+            <NumberPicker
+                android:id="@+id/addTermStartMonthPicker"
+                android:layout_width="30dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="25dp"
+                app:layout_constraintStart_toStartOf="@+id/addTermTitleText"
+                app:layout_constraintTop_toBottomOf="@+id/addTermTitleText"
+                tools:maxValue="12"
+                tools:minValue="1" />
+
+            <TextView
+                android:id="@+id/endDateLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/endDateLabel"
+                app:layout_constraintBottom_toBottomOf="@+id/addTermEndMonthPicker"
+                app:layout_constraintEnd_toEndOf="@+id/startDateLabel"
+                app:layout_constraintStart_toStartOf="@+id/startDateLabel"
+                app:layout_constraintTop_toTopOf="@+id/addTermEndMonthPicker" />
+
+            <TextView
+                android:id="@+id/nameLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="@string/termTitleLabel"
+                app:layout_constraintBottom_toBottomOf="@+id/addTermTitleText"
+                app:layout_constraintEnd_toStartOf="@+id/addTermTitleText"
+                app:layout_constraintTop_toTopOf="@+id/addTermTitleText" />
+
+            <TextView
+                android:id="@+id/startDateLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/startDateLabel"
+                app:layout_constraintBottom_toBottomOf="@+id/addTermStartMonthPicker"
+                app:layout_constraintEnd_toEndOf="@+id/nameLabel"
+                app:layout_constraintStart_toStartOf="@+id/nameLabel"
+                app:layout_constraintTop_toTopOf="@+id/addTermStartMonthPicker" />
+
+            <TextView
+                android:id="@+id/monthLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/monthLabelAbrev"
+                app:layout_constraintBottom_toTopOf="@+id/addTermStartMonthPicker"
+                app:layout_constraintEnd_toEndOf="@+id/addTermStartMonthPicker"
+                app:layout_constraintStart_toStartOf="@+id/addTermStartMonthPicker"
+                app:layout_constraintTop_toBottomOf="@+id/addTermTitleText" />
+
+            <TextView
+                android:id="@+id/dayLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dayLabelAbrev"
+                app:layout_constraintEnd_toEndOf="@+id/addTermStartDayPicker"
+                app:layout_constraintStart_toStartOf="@+id/addTermStartDayPicker"
+                app:layout_constraintTop_toTopOf="@+id/monthLabel" />
+
+            <TextView
+                android:id="@+id/yearLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/yearLabelAbrev"
+                app:layout_constraintEnd_toEndOf="@+id/addTermStartYearPicker"
+                app:layout_constraintStart_toStartOf="@+id/addTermStartYearPicker"
+                app:layout_constraintTop_toTopOf="@+id/dayLabel" />
+
+            <TextView
+                android:id="@+id/addTermFragTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/addTermFragmentTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</FrameLayout>
